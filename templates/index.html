@@ -142,13 +142,6 @@
 <body>
     <div class="container">
         <h1 class="title">Download MP3s from YouTube Videos</h1>
-        {% if error_message %}
-            <div class="error-container">
-                <div class="alert alert-danger" role="alert">
-                    {{ error_message }}
-                </div>
-            </div>
-        {% endif %}
         <form class="form" id="convert-form" action="{{ url_for('convert') }}" method="POST">
             <div class="input-container">
                 <input class="input-field" type="text" name="video_url" id="video-url" placeholder="Enter YouTube URL" required>
