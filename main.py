@@ -19,7 +19,7 @@ def index():
         # Handle form submission and conversion
         pass
 
-    return render_template('index.html', error_message=error_message)
+    return render_template('templates/index.html', error_message=error_message)
 
 
 def check_internet_connection():
