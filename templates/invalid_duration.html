@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Invalid Duration</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: linear-gradient(to bottom, #6495ED, #66CC99);
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .content {
+            text-align: center;
+            color: #FFFFFF;
+        }
+        h1 {
+            font-size: 60px;
+            color: #e60000;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 30px;
+            color: black;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+        .redirect-link {
+            font-size: 30px;
+            color: #0066cc;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Invalid Duration</h1>
+        <p>The duration of the selected video exceeds the maximum allowed limit of {{ max_duration }} minutes!</p>
+        <p>Please choose a video with a duration of {{ max_duration }} minutes or less.</p>
+        <p>Click <a class="redirect-link" href="/">here</a> to go back and try again.</p>
+    </div>
+</body>
+</html>

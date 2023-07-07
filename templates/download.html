@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Download Page</title>
+    <style>
+        body {
+            background-image: linear-gradient(to bottom, #6495ED, #66CC99);
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            font-size: 60px;
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            font-size: 16px;
+            padding: 10px 20px;
+            background-color: #FF0000; /* Red color */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 5px;
+            text-decoration: none; /* Remove underline */
+        }
+
+        .btn:hover {
+            background-color: #CC0000; /* Darker shade of red on hover */
+        }
+
+        .btn:active {
+            background-color: #990000; /* Even darker shade of red when pressed */
+        }
+
+        .btn-secondary {
+            font-size: 16px;
+            padding: 10px 20px;
+            background-color: #0000FF; /* Dark gray color */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+            margin-left: 10px;
+            text-decoration: none; /* Remove underline */
+        }
+
+        .btn-secondary:hover {
+            background-color: #0000CC; /* Darker shade of the color
+        }
+
+        .btn-secondary:active {
+            background-color: #000099; /* Even darker shade of the color
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Conversion to MP3 Successful</h1>
+        <h3> Name: {{ video_title }}</h3>
+        <a href="{{ url_for('download', file_path=file_path, video_title=video_title|urlencode) }}" class="btn">Download</a>
+        <a href="{{ url_for('index') }}" class="btn-secondary">Convert a New URL</a>
+    </div>
+</body>
+</html>
